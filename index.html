@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tak Tac Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="background-animation"></div>
+
+    <div class="container">
+      <h1>Tic Tak Tac</h1>
+
+      <div class="mode-switch">
+        <label
+          ><input type="radio" name="mode" value="human" checked /> Human vs
+          Human</label
+        >
+        <label
+          ><input type="radio" name="mode" value="computer" /> Human vs
+          Computer</label
+        >
+      </div>
+
+      <div class="game-board" id="gameBoard">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+
+      <div class="status" id="status"></div>
+
+      <div class="controls">
+        <input type="text" id="playerName" placeholder="Enter your name" />
+        <button onclick="resetGame()">Restart Game</button>
+      </div>
+
+      <h2>🏆 Leaderboard</h2>
+      <ul id="leaderboard"></ul>
+    </div>
+
+    <footer>Made with ❤️ by <strong>Sufal Basak</strong></footer>
+
+    <audio id="clickSound" src="sounds/click.mp3" preload="auto"></audio>
+    <audio id="winSound" src="sounds/win.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
